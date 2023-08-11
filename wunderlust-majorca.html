@@ -71,11 +71,11 @@
       <nav class="navtar">
         <div id="menu-toggle">
           <!-- responsive menu code from (with changes made to match mockups): https://css-tricks.com/three-css-alternatives-to-javascript-navigation/ -->
-          <h2 class="sr-only">Main Navigation</h2>
+          <h2 class="sr-only myNav">Menu</h2>
           <!-- hidden but accessible headings from: https://webaim.org/techniques/css/invisiblecontent/ -->
           <!-- <input name="toggle" id="toggle" type="checkbox" /> -->
           <!-- <label for="toggle">Menu</label> -->
-          <ul>
+          <ul class="mytab">
             <li class="menuTab">Menu</li>
             <li class="active"><a href="#">Destinations</a></li>
             <li><a href="#">Inspirations</a></li>
@@ -367,5 +367,17 @@
       <a href="#">Terms of Service</a>
     </footer>
   </body>
-  <script></script>
+  <script>
+    let nav=document.querySelector('.myNav')
+    let mytab=document.querySelector('.mytab')
+    let menuTab=document.querySelector('.menuTab')
+    nav.onclick=function(){
+      mytab.style.display='block'
+      console.log('show');
+    }
+    menuTab.onclick=function(){
+      console.log('show');
+      mytab.style.display='none'
+    }
+  </script>
 </html>
